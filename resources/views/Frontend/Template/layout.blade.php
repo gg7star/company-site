@@ -76,12 +76,12 @@
         <div id="strickymenu" class="menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-12">
+                    <div class="col-lg-5 col-12">
                         <div class="logo flex">
                             <a href="{{ route('/') }}" class="navbar-logo" >{{ $infos->name }}</a>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-12 main-menu">
+                    <div class="col-lg-7 col-12 main-menu">
                         <div class="main-menu-item">
                             <ul class="nav-menu">
                                 @foreach($items->where('appear', 'show') as $item)
