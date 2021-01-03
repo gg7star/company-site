@@ -67,5 +67,5 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     && apt-get install -y nodejs
 RUN npm install
 
-# EXPOSE 9000
+EXPOSE 9000
 # CMD ["php-fpm"]
