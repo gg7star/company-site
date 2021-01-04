@@ -1,0 +1,78 @@
+version: '3.5'
+services:
+  # MySQL Service
+  db:
+    image: mysql:5.7.31
+    container_name: vide_mysql
+    hostname: vide_mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      vide-network:
+        aliases:
+          - vide_mysql_network
+    environment:
+      MYSQL_USER: forge
+      MYSQL_PASSWORD: forge
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: vide
+      MYSQL_ROOT_HOST: '%'
+    command: 
+      - '--character-set-server=utf8mb4'
+      - '--collation-server=utf8mb4_general_ci'
+    volumes:
+      - ./dbdata:/var/lib/mysql
+      - ./sql_file:/root/sql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+
+  # PHP Service
+  app:
+    depends_on:
+      - db
+    links:
+      - db:vide_mysql
+    build:
+      context: '.'
+      args:
+        uid: 1000
+    container_name: app
+    ports:
+      - 80:80
+    environment:
+      - APACHE_RUN_USER=#1000
+      - APACHE_RUN_GROUP=#1000
+    volumes:
+      - .:/var/www/html
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      vide-network:
+        aliases:
+          - vide_app_network
+# Nginx Service
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: nginx
+  #   depends_on:
+  #     - app
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./:/var/www
+  #     - ./nginx/conf.d/:/etc/nginx/conf.d/
+  #     - ./nginx/logs/:/var/logs/nginx/
+  #   networks:
+  #     vide-network:
+  #       aliases:
+  #         - vide_nginx_network
+
+#Docker Networks
+networks:
+  vide-network:
+    name: vide-network
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
