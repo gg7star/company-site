@@ -1,0 +1,22 @@
+version: 2.0
+
+jobs:
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "7e:d6:9b:6f:a6:51:3d:9a:be:50:be:a8:5e:d4:f7:a1"
+      - run: 
+          name: Deploy server
+          command: |
+            ssh -oStrictHostKeyChecking=no -v ${SSH_USER}@${SERVER_IP} "cd ${SERVER_SIDE_DIR} && git pull origin master && ./deploy.sh"
+workflows:
+  version: 2
+  deployment:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: master
