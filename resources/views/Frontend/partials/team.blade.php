@@ -19,12 +19,12 @@
                         <div class="team-inner">
                             <h4 class="team-title">{{ $member->fname }} {{ $member->lname }}</h4>
                             <p>{{ $member->position }}</p>
-                            <ul class="social-list">
+                            <!-- <ul class="social-list">
                                 <li class="facebook"><a target="_blank" href="{{ $member->facebook }}"><i class="fa fa-facebook"></i></a></li>
                                 <li class="twitter"><a target="_blank" href="{{ $member->twitter }}"><i class="fa fa-twitter"></i></a></li>
                                 <li class="google-plus"><a target="_blank" href="{{ $member->instagram }}"><i class="fa fa-instagram"></i></a></li>
                                 <li class="linkedin"><a target="_blank" href="{{ $member->linkedin }}"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>

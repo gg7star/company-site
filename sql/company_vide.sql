@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2021-01-04 09:23:25
+Date: 2021-01-05 05:15:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -50,7 +50,7 @@ CREATE TABLE `colors` (
 -- ----------------------------
 -- Records of colors
 -- ----------------------------
-INSERT INTO `colors` VALUES ('1', 'purple', '2019-04-06 00:06:41', '2020-12-29 01:10:27');
+INSERT INTO `colors` VALUES ('1', 'bluejay', '2019-04-06 00:06:41', '2021-01-05 00:24:43');
 
 -- ----------------------------
 -- Table structure for contacts
@@ -240,7 +240,7 @@ CREATE TABLE `infos` (
 -- ----------------------------
 -- Records of infos
 -- ----------------------------
-INSERT INTO `infos` VALUES ('1', 'Active Business Solutions', 'dragonwarrior425@yandex.com', '000-000-000', '224 Aspen C', 'United States', 'New York', 'Wantagh', '11793', '2019-04-05 03:33:09', '2019-04-12 04:09:17');
+INSERT INTO `infos` VALUES ('1', 'Active Business Solutions', 'delyra62@optonline.net', '+1 516 713 2090', '224 Aspen C, Wantagh NY, 11793, US', 'United States', 'New York', 'Wantagh', '11793', '2019-04-05 03:33:09', '2019-04-12 04:09:17');
 
 -- ----------------------------
 -- Table structure for metas
@@ -261,7 +261,7 @@ CREATE TABLE `metas` (
 -- ----------------------------
 -- Records of metas
 -- ----------------------------
-INSERT INTO `metas` VALUES ('1', 'Active Business Solutions', 'Enter meta tags ..', 'keywords', 'Copyright © 2020, Active Business Solutions. All Rights Reserved.', 'logo.png', '2019-04-05 22:01:06', '2020-12-27 01:50:37');
+INSERT INTO `metas` VALUES ('1', 'Active Business Solutions', 'Enter meta tags ..', 'keywords', 'Copyright © 2020, Active Business Solutions. All Rights Reserved.', 'ABS-logo.png', '2019-04-05 22:01:06', '2020-12-27 01:50:37');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -364,11 +364,14 @@ CREATE TABLE `partners` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of partners
 -- ----------------------------
+INSERT INTO `partners` VALUES ('9', 'F6s', '1609807449f6s.png', '2021-01-05 00:36:28', '2021-01-05 00:44:09');
+INSERT INTO `partners` VALUES ('10', 'audeoSoft GmbH', '1609807456audeosoft.png', '2021-01-05 00:37:13', '2021-01-05 00:44:16');
+INSERT INTO `partners` VALUES ('11', 'inoui.agency', '1609807467inouiagency.png', '2021-01-05 00:37:38', '2021-01-05 00:44:27');
 
 -- ----------------------------
 -- Table structure for password_resets

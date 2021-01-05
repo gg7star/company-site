@@ -105,11 +105,18 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
+                            <a href="{{ route('/') }}">
+                                <img src="{{ asset('uploads/ABS.PNG')}}" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
                             <h3>{{ $heading->footer_contact }}</h3>
                             <div class="footer-address-item">
                                 <div class="icon"><i class="fa fa-map-marker"></i></div>
                                 <div class="text">
-                                    <span>{{ $infos->address }} , {{ $infos->city }} , {{ $infos->state }} , {{ $infos->country }} </span>
+                                    <span>{{ $infos->address }}</span>
                                 </div>
                             </div>
                             <div class="footer-address-item">
@@ -126,7 +133,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h3>{{ $heading->footer_links }}</h3>
                             <ul>
@@ -135,7 +142,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-md-6">
                         <div class="mt-30">
                             <h3 class="keep-touch">{{ $heading->footer_keep }}</h3>
