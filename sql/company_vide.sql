@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2020-12-30 09:24:00
+Date: 2021-01-04 09:23:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -240,7 +240,7 @@ CREATE TABLE `infos` (
 -- ----------------------------
 -- Records of infos
 -- ----------------------------
-INSERT INTO `infos` VALUES ('1', 'Active Business Solutions', 'contact@company.dev', '000-111-2222', '224 Aspen C', 'United States', 'New York', 'Wantagh', '11793', '2019-04-05 03:33:09', '2019-04-12 04:09:17');
+INSERT INTO `infos` VALUES ('1', 'Active Business Solutions', 'dragonwarrior425@yandex.com', '000-000-000', '224 Aspen C', 'United States', 'New York', 'Wantagh', '11793', '2019-04-05 03:33:09', '2019-04-12 04:09:17');
 
 -- ----------------------------
 -- Table structure for metas
@@ -261,7 +261,7 @@ CREATE TABLE `metas` (
 -- ----------------------------
 -- Records of metas
 -- ----------------------------
-INSERT INTO `metas` VALUES ('1', 'Active Business Solutions', 'Enter meta tags ..', 'keywords', 'Copyright © 2020, COMPANY. All Rights Reserved.', 'logo.png', '2019-04-05 22:01:06', '2020-12-27 01:50:37');
+INSERT INTO `metas` VALUES ('1', 'Active Business Solutions', 'Enter meta tags ..', 'keywords', 'Copyright © 2020, Active Business Solutions. All Rights Reserved.', 'logo.png', '2019-04-05 22:01:06', '2020-12-27 01:50:37');
 
 -- ----------------------------
 -- Table structure for migrations
