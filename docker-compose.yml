@@ -26,8 +26,6 @@ services:
       - ./dbdata:/var/lib/mysql
       - ./sql:/root/sql
       - ./mysql/my.cnf:/etc/mysql/my.cnf
-      # - /var/data/mysql:/var/lib/mysql
-      # - /etc/mysql:/etc/mysql
 
   # PHP Service
   app:
