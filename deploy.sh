@@ -25,6 +25,7 @@ docker-compose up -d --build
 # Install composer
 # docker-compose exec app composer require doctrine/dbal
 docker-compose exec app composer install
+docker-compose exec app composer update
 
 # Generate key
 docker-compose exec app php artisan key:generate
